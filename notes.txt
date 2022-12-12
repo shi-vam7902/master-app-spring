@@ -1,0 +1,8 @@
+user module 12-12-2022
+signup
+login
+token->
+session controller-> public api access without token
+	signup
+	login
+	forgotpassword
