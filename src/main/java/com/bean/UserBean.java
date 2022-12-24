@@ -6,6 +6,56 @@ public class UserBean {
 	private String firstname;
 	private String password;
 	private String authToken;
+	private String otp;
+	private String createdAt;
+	private Integer role;
+
+	public Integer getRole() {
+		return role;
+	}
+
+	public void setRole(Integer role) {
+		this.role = role;
+	}
+
+	public enum Role {
+		ADMIN(1), USER(2);
+
+		int roleId;
+									
+		 public int getRoleId() {
+			return roleId;
+		}
+
+		public void setRoleId(int roleId) {
+			this.roleId = roleId;
+		}
+
+		Role(int r) {
+			roleId = r;
+		}
+
+	}
+
+	public String getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(String createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public void setUserid(Integer userid) {
+		this.userid = userid;
+	}
+
+	public String getOtp() {
+		return otp;
+	}
+
+	public void setOtp(String otp) {
+		this.otp = otp;
+	}
 
 	public String getAuthToken() {
 		return authToken;
