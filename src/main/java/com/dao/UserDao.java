@@ -9,6 +9,7 @@ import com.bean.UserBean;
 
 @Repository
 public class UserDao {
+	
 
 	// allocated memory without new keyword #singleton
 	@Autowired
@@ -18,6 +19,7 @@ public class UserDao {
 		stmt.update("insert into users (firstname , email , password, createdAt,role) values (?,?,?,?,?)", userBean.getFirstname(),
 				userBean.getEmail(), userBean.getPassword(),userBean.getCreatedAt(),userBean.getRole());
 	}
+	
 
 	public UserBean getUserByEmail(String email) {
 		try {
@@ -27,7 +29,6 @@ public class UserDao {
 		} catch (Exception e) {
 			
 			System.out.println("User Not found with this email==> "+email);
-			
 			return null;
 		}
 
